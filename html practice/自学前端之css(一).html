@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <title>自学前端之css</title>
+    </head>
+    <body>
+        <h1>自学前端之CSS</h1>
+        <h2>CSS</h2>
+        <p>css(cascading style sheets)，层叠样式表，就是美化网页的。</p>
+        <h3>css的优点</h3>
+        <ul>
+            <li>省时</li>
+            <li>页面加载更快</li>
+            <li>易维护</li>
+            <li>多兼容</li>
+        </ul>
+        <h3>css语法规则</h3>
+        <p>css样式：由选择符和声明构成，声明是由属性名和属性值构成</p>
+        <pre>
+        p{
+            color :red;
+            font-size:20px;
+        }
+        </pre>
+        <h3>引入方式</h3>
+        <h4>内联式(行内式)</h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p style='color:red; fontSize:20px;'&gt;我是一个段落&lt;/p&gt;
+        <h4>嵌入式</h4>
+        <pre>
+            &lt;head&gt;
+                &lt;style&gt;
+                    p{
+                        color:red;
+                        font-size:20px;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;    
+        </pre>
+        <h4>外部式</h4>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel='stylesheet' type='text/css' href='index.css'&gt;
+        <p>index.css文件如下</p>
+        <pre>
+            p{
+                color:red;
+                font-size:20px;
+            }
+        </pre>
+        <h4>三种方式的优先级</h4>
+        <p>内联式>嵌入式>外部式<strong>(嵌入式与外部式要看设置顺序)</strong></p>
+        <h3>常用选择器</h3>
+        <h4>基础选择器</h4>
+        <ul>
+            <li>标签(元素)选择器</li>
+            <li>类选择器</li>
+            <li>id选择器</li>
+        </ul>
+        <h4>高级选择器</h4>
+        <ul>
+            <li>后代选择器</li>
+            <li>子代选择器</li>
+            <li>组合选择器</li>
+            <li>交集选择器</li>
+            <li>伪类选择器</li>
+        </ul>
+        <h3>基础选择器</h3>
+        <img src="imgs/css1-1.png" alt="" width="500px">
+        <p>太简单，没啥要说的</p>
+        <h3>高级选择器</h3>
+        <img src="imgs/css1-2.png" alt=""width="600px">
+        <h3>css继承性</h3>
+        <p>可继承的属性</p>
+        <ul>
+            <li>color</li>
+            <li>font-size</li>
+        </ul>
+        <h3>选择器权重</h3>
+        <p>选择器存在权重，权重决定了优先级</p>
+        <table border="1" width="400px" style="border-spacing: 0;">
+            <tr>
+                <th>选择器</th>
+                <th>权值</th>
+            </tr>
+            <tr>
+                <td>标签</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>类</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>内联样式</td>
+                <td>1000</td>
+            </tr>
+        </table>
+        <h4>计算权重</h4>
+        <p>可以数各类型选择器的数量:id/类/标签</p>
+        <strong>注意:</strong>
+        <ol>
+            <li>权重计算永不进位</li>
+            <li>继承来的权重近乎为0</li>
+        </ol>
+        <img src="imgs/css1-3.png" width="400px" alt="">
+        <h3>!important</h3>
+        <p>会破坏权重规则，慎用</p>
+        <img src="imgs/css1-4.png" width="400px" alt="">
+    </body>
+</html>

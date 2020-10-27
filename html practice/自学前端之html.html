@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自学前端之html</title>
+</head>
+<body>
+    <h1>自学前端之HTML</h1>
+    <h2>HTML</h2>
+    <p><strong>html</strong>(hyperText makeup language)，超文本标记语言，用来搭网页结构的。</p>
+    <h2>常用标签</h2>
+    <ul>
+        <li>h1-h6</li>
+        <li>p</li>
+        <li>strong/em</li>
+        <li>hr/br</li>
+        <li>ul/ol/dl</li>
+        <li>li</li>
+        <li><strong>div/span</strong></li>
+        <li>table/th/tr/td</li>
+        <li>a</li>
+        <li>img</li>
+        <li>form</li>
+        <li>input</li>
+        <li>textarea</li>
+        <li>select</li>
+    </ul>
+    <h2>结构规范</h2>
+    <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"/&gt;
+            &lt;title&gt;标题&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        
+        &lt;/body&gt;
+    &lt;/html&gt;
+    </pre>
+    <h2>标题标签</h2>
+    <p>定义文章的标题，<strong>块级标签，独占一行</strong></p>
+    <ul>
+        <li>h1</li>
+        <li>h2</li>
+        <li>h3</li>
+        <li>h4</li>
+        <li>h5</li>
+        <li>h6</li>
+    </ul>
+    <p>简单，没啥说的</p>
+    <h2>段落标签</h2>
+    <p>定义段落，<strong>块级标签，独占一行</strong></p>
+    &lt;p&gt;我是一个段落&lt;/p&gt;
+    <h2>强调标签</h2>
+    <p>加粗和倾斜文本，<strong>行级</strong></p>
+    &lt;strong&gt;<strong>加粗</strong>&lt;/strong&gt;<br>
+    &lt;em&gt;<em>斜体</em>&lt;/em&gt;
+    <h2>换行</h2>
+    <p>在html中所有的<strong>人为设置的空格</strong>都是无效的，无论敲了多少空格，只有第一个生效。</p>
+    &lt;h3&gt;琵琶行&lt;/h3&gt;<br>
+    
+
+    &lt;p&gt;
+    <pre>
+    一道残阳铺水中，&lt;br&gt;
+    半江瑟瑟半江红。&lt;br&gt;
+    可怜九月初三夜，&lt;br&gt;
+    露似珍珠月似弓。</pre>
+    &lt;/p&gt;
+    <h2>分隔符</h2>
+    <p>hr，块级标签，独占一行。</p>
+    <h2>特殊符号</h2>
+    <p>查看特殊符号对照表</p>
+    <h2>列表标签</h2>
+    <h3>无序</h3>
+    <pre>
+    &lt;h1&gt;新闻列表&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;特朗普感染新冠...&lt;/li&gt;
+        &lt;li&gt;李诚儒手撕郭敬明&lt;/li&gt;
+    &lt;/ul&gt;    
+    </pre>
+    <h3>有序</h3>
+    <pre>
+    &lt;h2&gt;2020年度音乐排行榜&lt;/h2&gt;
+    &lt;ol&gt;
+        &lt;li&gt;卡路里&lt;/li&gt;
+        &lt;li&gt;我的将军啊&lt;/li&gt;
+    &lt;/ol&gt;
+    </pre>
+    <h3>自定义</h3>
+    <pre>
+    &lt;dl&gt;
+        &lt;dt&gt;iphone 12&lt;/dt&gt;
+        &lt;dd&gt;性价比高&lt;/dd&gt;
+        &lt;dd&gt;最新发布&lt;/dd&gt;
+    &lt;/dl&gt;
+    </pre>
+    <h2>表格标签</h2>
+    <pre>
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;姓名&lt;/th&gt;
+            &lt;th&gt;年龄&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;john&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;    
+    </pre>
+    <h3>表格添加边框</h3>
+    &lt;table border='1'&gt;&lt;/table&gt;
+    <h3>表格添加标题</h3>
+    <pre>
+    &lt;table&gt;
+        &lt;caption&gt;个人信息&lt;/caption&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;    
+    </pre>
+    <h2>单元格合并</h2>
+    <ul>
+        <li>colspan 合并列</li>
+        <li>rowspan 合并行</li>
+    </ul>
+    <h2>超链接</h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='#'&gt;百度一下&lt;/a&gt;
+    <h3>打开新的链接</h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='#' target='_blank'&gt;百度一下&lt;/a&gt;
+    <h3>当前网页进行跳转</h3>
+    <pre>
+    &lt;p id='top'&gt;此处是首页内容&lt;/p&gt;
+    &lt;a href='#top'&gt;跳转到首页&lt;/a&gt;
+    </pre>
+    <h3>跳转邮箱</h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href='mailto:23456789@qq.com'&gt;联系我&lt;/a&gt;
+    <h2>图片标签</h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="图片地址"&gt;
+    <h3>路径解析</h3>
+    <h4>相对路径</h4>
+    <ul>
+        <li>./当前，可以省略</li>
+        <li>../上一级，以此类推</li>
+    </ul>
+    <strong>绝对路径</strong>：完整路径
+    <h3>相关属性</h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src='' width='100px' alt='加载失败提示文本' title='提示文本'&gt;
+    <h2>表单</h2>
+    <img src="imgs/st1.png" width="600px" alt=""><br>
+    <img src="imgs/st2.png" width="600px" alt="">
+    <h2>div</h2>
+    <p>容器标签，本身不具备任何意义，用于划分区域。</p>
+    <h2>span</h2>
+    <p>文本容器，不具备任何意义。</p>
+    <h2>标签分类</h2>
+    <h3>文本级标签</h3>
+    <ul>
+        <li>h1-h6</li>
+        <li>p</li>
+        <li>strong/em</li>
+        <li>span</li>
+        <li>a</li>
+        <li>img</li>
+    </ul>
+    <h3>排版级标签</h3>
+    <ul>
+        <li>br/hr</li>
+        <li>div</li>
+        <li>input</li>
+        <li>table</li>
+        <li>ul/ol/dl</li>
+        <li>select/option</li>
+        <li>form</li>
+    </ul>
+</body>
+</html>

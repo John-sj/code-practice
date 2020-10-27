@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自学前端之css(二)</title>
+</head>
+<body>
+    <h1>自学前端之css(二)</h1>
+    <h2>css属性</h2>
+    <h3>字体属性</h3>
+    <h4>font-family</h4>
+    <p>设置字体，具有<strong>继承性</strong></p>
+    <pre><code>
+        body{
+            font-family:'字体1','字体二';
+        }
+    </code></pre>
+    <strong>建议：</strong><span>设置多字体，备选</span>
+    <h4>font-size</h4>
+    <p>设置字号，具有<strong>继承性</strong></p>
+    <h5>单位</h5>
+    <ul>
+        <li>px绝对单位，设置多少是多少</li>
+        <li>em相对单位，当前某块区域的字体大小，自适应</li>
+        <li>rem相对单位，<strong>主要用于移动端。</strong></li>
+    </ul>
+    <h4>color</h4>
+    <p>字体颜色，具有<strong>继承性</strong></p>
+    <h5>颜色值</h5>
+    <ul>
+        <li>颜色名 white</li>
+        <li>rgb(255,255,255)</li>
+        <li>rgba(255,255,255,.7)</li>
+        <li>十六进制#ffffff,可缩写#fff</li>
+    </ul>
+    <h4>font-style</h4>
+    <p>设置字体样式</p>
+    <h5>值</h5>
+    <ul>
+        <li>normal</li>
+        <li>italic倾斜</li>
+    </ul>
+    <h4>font-weight</h4>
+    <p>设置字宽</p>
+    <h5>值</h5>
+    <ul>
+        <li>100-900</li>
+        <li>normal(400)</li>
+        <li>bold</li>
+        <li>bolder</li>
+    </ul>
+    <h4>简写方式</h4>
+    <pre><code>
+        p{
+            font:字号/行高比 "字体";
+        }
+    </code></pre>
+    <h3>文本属性</h3>
+    <h4>text-decoration</h4>
+    <p>设置下划线</p>
+    <h5>值</h5>
+    <ul>
+        <li>none</li>
+        <li>underline</li>
+        <li>overline</li>
+        <li>linethrough</li>
+    </ul>
+    <h4>text-indent</h4>
+    <p>设置缩进，建议使用em</p>
+    <h4>line-height</h4>
+    <p>设置行间距，行与行之间的距离</p>
+    <strong>设置line-height=height，科室文本垂直居中。</strong><br><br>
+    <strong>注意：</strong><span>保证行高大于字体大小</span>
+    <h4>letter-spacing</h4>
+    <p>设置中文字间距</p>
+    <h4>word-spacing</h4>
+    <p>设置英文单词间距</p>
+    <h4>text-align</h4>
+    <p>设置文本对齐方式</p>
+    <h3>背景属性</h3>
+    <h4>background-color</h4>
+    <p>设置背景色，取值与color一致</p>
+    <h4>background-image</h4>
+    <p>设置背景图片，默认会平铺</p>
+    <pre><code>
+        .box{
+            background-image:url('图片地址');
+        }
+    </code></pre>
+    <h4>background-repeat</h4>
+    <p>设置图片的行为</p>
+    <h5>值</h5>
+    <ul>
+        <li>no-repeat</li>
+        <li>repeat-x</li>
+        <li>repeat-y</li>
+        <li>repeat(默认)</li>
+    </ul>
+    <h4>background-position</h4>
+    <p>背景定位，可设单一方向，background-position-x&background-position-y。</p>
+    <h5>值</h5>
+    <ul>
+        <li>百分比</li>
+        <li>关键字(top bottom left right center)</li>
+        <li>px</li>
+    </ul>
+    <pre><code>
+        .box{
+            background-position:"水平" "垂直";
+        }
+    </code></pre>
+    <strong>百分比深入研究</strong>
+    <p>水平百分比=(容器宽度-图片宽度)*100%</p>
+</body>
+</html>
