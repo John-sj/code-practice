@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自学前端之css(二)</title>
+    <style>
+        .h1{
+            display: none;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>自学前端之css(二)</h1>
+    <h1 class="h1">自学前端之css(二)</h1>
     <h2>css属性</h2>
     <h3>字体属性</h3>
     <h4>font-family</h4>
@@ -70,7 +78,7 @@
     <p>设置缩进，建议使用em</p>
     <h4>line-height</h4>
     <p>设置行间距，行与行之间的距离</p>
-    <strong>设置line-height=height，科室文本垂直居中。</strong><br><br>
+    <strong>设置line-height=height，可使文本垂直居中。</strong><br><br>
     <strong>注意：</strong><span>保证行高大于字体大小</span>
     <h4>letter-spacing</h4>
     <p>设置中文字间距</p>
@@ -112,5 +120,119 @@
     </code></pre>
     <strong>百分比深入研究</strong>
     <p>水平百分比=(容器宽度-图片宽度)*100%</p>
+    <h2>元素分类</h2>
+    <p>块状元素：独占一行，可设宽高</p>
+    <ul>
+        <li>div</li>
+        <li>ul/ol/dl</li>
+        <li>p</li>
+        <li>h1-h6</li>
+        <li>table</li>
+        <li>form</li>
+    </ul>
+    <p>行内元素：在一行内显示，不可设宽高，文本填充其大小</p>
+    <ul>
+        <li>a</li>
+        <li>span</li>
+        <li>em/strong</li>
+        <li>label</li>
+    </ul>
+    <p>行内块元素：在一行内显示，可设宽高</p>
+    <ul>
+        <li>input</li>
+        <li>img</li>
+    </ul>
+    <h3>display属性</h3>
+    <p>控制元素的显示方式</p>
+    <h4>值</h4>
+    <ul>
+        <li>block</li>
+        <li>inline</li>
+        <li>inline-block</li>
+        <li>none隐藏，不留坑</li>
+    </ul>
+    <h2>盒模型</h2>
+    <p>所有的html元素都可看成盒子</p>
+    <p>盒模型是针对块级元素而言的，盒子模型的属性包括：</p>
+    <ul>
+        <li>width</li>
+        <li>height</li>
+        <li>padding</li>
+        <li>margin</li>
+        <li>border</li>
+    </ul>
+    <p><strong>注意：</strong>我们通常设置的width和height只是内容的宽高，并不是盒子的实际宽高</p>
+    <h3>padding</h3>
+    <p>内边距，border到content的距离，可以设置四个方向</p>
+    <ul>
+        <li>padding-top</li>
+        <li>padding-right</li>
+        <li>padding-bottom</li>
+        <li>padding-left</li>
+    </ul>
+    <pre><code>
+        div{
+            /*200px 200px*/
+            width:180px;
+            height：180px;
+
+            padding:10px;
+            /*等价于*/
+            padding-top:10px;
+            padding-right:10px;
+            padding-bottom:10px;
+            padding-left:10px;
+        }
+    </code></pre>
+    <h4>简写方式</h4>
+    <pre>
+        <code>
+            /*上 右 下 左*/
+            padding:10px 10px 10px 10px;
+            /*上 左右 下*/
+            padding:10px 20px 10px;
+            /*上下 左右*/
+            padding:10px 20px;
+            /*上下左右*/
+            padding:10px;
+        </code>
+    </pre>
+    <p>可以通过设置padding来使content的位置达到想要的效果</p>
+    <p><strong>注意：</strong>padding会填充背景色</p>
+    <h3>border</h3>
+    <p>边框</p>
+    <h4>三要素，也可设四个方向</h4>
+    <ul>
+        <li>border-width粗细</li>
+        <li>border-style样式</li>
+        <li>border-color颜色</li>
+    </ul>
+    <code>border:1px solid red;</code>
+    <h3>margin</h3>
+    <p>盒子之间的距离，可设四个方向</p>
+    <p>
+        <strong>注意：</strong>
+        <ol>
+            <li>如果两个左右相邻的盒子在水平方向上设置了水平的margin，此时的margin为两者之和</li>
+            <li>但是如果两个上下相邻的盒子在竖直方向上设置了竖直的margin，此时的margin为较大的那个，这称为<strong>margin塌陷</strong></li>
+        </ol>
+    </p>
+    <h2>清除默认样式</h2>
+    <p>创建一个reset.css，存放清除设置</p>
+    <pre>
+        <code>
+            body,ul,ol,dl,p,dt{
+                margin:0;
+                padding:0;
+            }
+            input{
+                border:none;
+                outline:none;
+            }
+            ul{
+                list-style:none;
+            }
+        </code>
+    </pre>
 </body>
 </html>
